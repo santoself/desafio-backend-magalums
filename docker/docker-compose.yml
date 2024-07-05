@@ -1,0 +1,16 @@
+services:
+  db:
+    image: mysql
+    container_name: 'mysql-magalu'
+    ports:
+      - 3306:3306
+    environment:
+      MYSQL_ROOT_PASSWORD: 123
+      MYSQL_USER: admin
+      MYSQL_PASSWORD: 123
+      MYSQL_DATABASE: magaludb
+
+  phpmyadmin:
+    image: phpmyadmin
+    ports:
+      - 80:80
